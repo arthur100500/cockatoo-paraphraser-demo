@@ -11,15 +11,15 @@ from parrot_model import ParrotModel
 
 @st.cache(allow_output_mutation=True)
 def get_parrot() -> ParrotModel:
-    """ Generates the parrot model and caches it, as it takes up around 10-15 seconds"""
+    """Generates the parrot model and caches it, as it takes up around 10-15 seconds"""
     return ParrotModel()
 
 
 def main() -> None:
-    """ Streamlit app entrypoint """
+    """Streamlit app entrypoint"""
     st.set_page_config(
-        page_title='Cockatoo',
-        page_icon='favicon.ico',
+        page_title="Cockatoo",
+        page_icon="favicon.ico",
     )
 
     parrot = get_parrot()
@@ -28,16 +28,16 @@ def main() -> None:
     sidebar.header("Configure cockatoo")
     sidebar.subheader("Cockatoo parameters")
 
-    parrot.set_seed(int(sidebar.number_input('Seed', 0, 999999, 1)))
-    parrot.adequacy_threshold = sidebar.slider('Adequacy', 0.0, 1.0, 0.8)
-    parrot.fluency_threshold = sidebar.slider('Fluency', 0.0, 1.0, 0.8)
-    parrot.amount = int(sidebar.slider('Maximum amount', 1, 9, 3))
-    parrot.do_diverse = sidebar.checkbox('Do Diverse?')
+    parrot.set_seed(int(sidebar.number_input("Seed", 0, 999999, 1)))
+    parrot.adequacy_threshold = sidebar.slider("Adequacy", 0.0, 1.0, 0.8)
+    parrot.fluency_threshold = sidebar.slider("Fluency", 0.0, 1.0, 0.8)
+    parrot.amount = int(sidebar.slider("Maximum amount", 1, 9, 3))
+    parrot.do_diverse = sidebar.checkbox("Do Diverse?")
 
     st.title("🦜 Cockatoo paraphraser")
     st.subheader("Type the text you want to paraphrase and get the result!")
 
-    phrase = st.text_area('Input for cockatoo to paraphrase')
+    phrase = st.text_area("Input for cockatoo to paraphrase")
     result = parrot.para_phrase(phrase)
 
     if result:
@@ -48,5 +48,5 @@ def main() -> None:
         st.subheader("Cockatoo gave no results")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

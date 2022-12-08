@@ -1,7 +1,6 @@
 """Module for a Parrot Model class"""
 
 import torch
-
 from parrot import Parrot
 
 
@@ -10,7 +9,9 @@ class ParrotModel:
 
     def __init__(self, seed: int = 0) -> None:
         """Creates parrot"""
-        self.parrot = Parrot(model_tag="prithivida/parrot_paraphraser_on_T5", use_gpu=False)
+        self.parrot = Parrot(
+            model_tag="prithivida/parrot_paraphraser_on_T5", use_gpu=False
+        )
         self.seed = seed
         self.amount = 1
         self.__set_seed()
@@ -37,7 +38,7 @@ class ParrotModel:
             do_diverse=self.do_diverse,
             max_return_phrases=self.amount,
             fluency_threshold=self.fluency_threshold,
-            adequacy_threshold=self.adequacy_threshold
+            adequacy_threshold=self.adequacy_threshold,
         )
 
         return para_phrases

@@ -5,7 +5,6 @@ Model on HF: https://huggingface.co/prithivida/parrot_paraphraser_on_T5
 This is a project for 2022 ML Course practice
 """
 import streamlit as st
-
 from parrot_model import ParrotModel
 
 

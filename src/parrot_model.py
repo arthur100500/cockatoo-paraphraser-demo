@@ -30,8 +30,8 @@ class ParrotModel:
         phrase: str,
         do_diverse: bool = True,
         amount: int = 1,
-        fluency_threshold: int = 0.8,
-        adequacy_threshold: int = 0.8,
+        fluency_threshold: float = 0.8,
+        adequacy_threshold: float = 0.8,
     ) -> list:
         """Get the list of paraphrases
 

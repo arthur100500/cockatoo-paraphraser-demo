@@ -8,7 +8,7 @@ name: Lint Code Base
 
 on:
   push:
-    branches: 
+    branches:
       [master, main]
   pull_request:
     branches:

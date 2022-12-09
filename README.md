@@ -1,4 +1,7 @@
 # cockatoo-paraphraser-demo
+[![CodeFactor](https://www.codefactor.io/repository/github/arthur100500/cockatoo-paraphraser-demo/badge)](https://www.codefactor.io/repository/github/arthur100500/cockatoo-paraphraser-demo)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+<br>
 A small streamlit app to demonstrate a Parrot Paraphrasing on T5 Model from Huggingface
 <br>
 ## Parrot

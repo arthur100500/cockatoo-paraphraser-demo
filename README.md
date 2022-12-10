@@ -7,7 +7,7 @@ A small streamlit app to demonstrate a Parrot Paraphrasing on T5 Model from Hugg
 ## Parrot
 Parrot is a paraphrase based utterance augmentation framework purpose built to accelerate training NLU models
 
-Link to the modle on huggingface.co: https://huggingface.co/prithivida/parrot_paraphraser_on_T5
+Link to the modle on huggingface.co: <https://huggingface.co/prithivida/parrot_paraphraser_on_T5>
 <br>
 ## Running the project
 ```bash

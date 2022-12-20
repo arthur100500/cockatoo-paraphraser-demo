@@ -1,0 +1,2 @@
+parrot @ git+https://github.com/PrithivirajDamodaran/Parrot_Paraphraser.git@bca7526834bf83bf55e1ebf3f7c87fd9fbb713a6
+streamlit==1.15.2
